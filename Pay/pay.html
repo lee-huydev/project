@@ -22,10 +22,15 @@
                   </span>
                   <h2>Thông tin nhận hàng</h2>
                   <form action="">
-                     <input type="email" required placeholder="Email" />
-                     <input type="text" required placeholder="Họ và tên" />
-                     <input type="text" required placeholder="Số điện thoại (tuỳ chọn)" />
-                     <input type="text" required placeholder="Địa chỉ (tuỳ chọn)" />
+                     <input class="email" type="email" required placeholder="Email" />
+                     <input class="name" type="text" required placeholder="Họ và tên" />
+                     <input
+                        class="phone"
+                        type="text"
+                        required
+                        placeholder="Số điện thoại (tuỳ chọn)"
+                     />
+                     <input class="add" type="text" required placeholder="Địa chỉ (tuỳ chọn)" />
                      <select name="calc_shipping_provinces" required="">
                         <option value="">Tỉnh / Thành phố</option>
                      </select>
@@ -75,7 +80,7 @@
                   </div>
                   <div class="pay">
                      <p>Tổng cộng <span class="totalPricePay">123</span></p>
-                     <a href="">
+                     <a href="../Cart/cart.html">
                         <i class="fa-solid fa-chevron-left"></i>
                         Quay về giỏ hàng
                      </a>

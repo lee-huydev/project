@@ -111,4 +111,14 @@ bill = () => {
 };
 bill();
 const sendOrder = document.querySelector('.send');
-sendOrder.onclick = () => {};
+const email = document.querySelector('.email');
+const name = document.querySelector('.name');
+const phone = document.querySelector('.phone');
+const add = document.querySelector('.add');
+sendOrder.onclick = (e) => {
+   if (email.value !== '' && name.value !== '' && phone.value !== '' && add.value !== '') {
+      e.preventDefault();
+      localStorage.removeItem('cart');
+      location.replace('../Store/store.html');
+   }
+};

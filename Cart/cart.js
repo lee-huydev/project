@@ -85,15 +85,22 @@ for (let index in dels) {
 }
 //! Total Price Need Pay
 const pay = $('.total-price');
-let totalPrices = valueCarts.map((e) => {
-   return e.totalPrice;
-});
 let total = 0;
-for (totalPrice of totalPrices) {
-   total += Number(totalPrice);
+if (valueCarts !== null) {
+   let totalPrices = valueCarts.map((e) => {
+      return e.totalPrice;
+   });
+   for (totalPrice of totalPrices) {
+      total += Number(totalPrice);
+   }
 }
+
 function formatNumber(num) {
    var n = Number(num);
    return n.toLocaleString('vi');
 }
 pay.innerHTML = `${formatNumber(total)}.000₫`;
+
+$('.pay').addEventListener('click', () => {
+   location.replace('../Pay/pay.html');
+});
