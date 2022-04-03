@@ -114,10 +114,33 @@ body::-webkit-scrollbar-track {
    color: white;
    padding: 31px 10px;
    margin: 0 5px;
-   font-size: 1.5rem;
+   font-size: 1.8rem;
    text-transform: uppercase;
    font-weight: 500;
 }
+#header .header-container .cart a .quantity {
+   position: relative;
+}
+#header .header-container .cart a .quantity .quantity-item {
+   position: absolute;
+   position: absolute;
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 500;
+   top: -12px;
+   right: -8px;
+   padding: 1px 4px;
+   background-color: #dc8068;
+   border-radius: 50%;
+   font-size: 1.4rem;
+   display: none;
+}
+#header .header-container .cart a:nth-child(1):hover .quantity-item {
+   background-color: white;
+}
+#header .header-container .cart a .quantity .quantity-item.active {
+   display: block;
+}
+#header .header-container .cart a:nth-child(1):hover,
 #header .header-container .cart a:nth-child(2):hover,
 #header .header-container .cart a:nth-child(3):hover {
    color: #dc8068;
@@ -129,6 +152,7 @@ body::-webkit-scrollbar-track {
    display: inline-block;
    background-color: #dc8068;
    text-align: center;
+   font-size: 1.5rem;
 }
 #header .header-container .cart a:last-child::before {
    content: '\f30c';
@@ -220,6 +244,17 @@ body::-webkit-scrollbar-track {
 }
 #content .content-container .product .product-container .item:first-child .information .buy a {
    padding: 15px 109px;
+   border-bottom-left-radius: 15px;
+}
+#content
+   .content-container
+   .product
+   .product-container
+   .item:first-child
+   .information
+   .buy
+   .add-cart {
+   display: none;
 }
 #content .content-container .product .product-container .item .img {
    margin-bottom: 10px;
@@ -387,4 +422,54 @@ body::-webkit-scrollbar-track {
    padding-top: 45px;
    display: block;
    color: #988e89;
+}
+#toast {
+   position: fixed;
+   top: 85px;
+   right: 5px;
+   z-index: 99;
+}
+#toast .toast-msg {
+   width: 300px;
+   height: 100px;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   background-color: white;
+   border-radius: 30px;
+   display: flex;
+   align-items: center;
+   font-family: 'Montserrat', sans-serif;
+   animation: fadeIn 0.5s ease-in-out;
+   transition: all 0.5s ease-in-out;
+}
+@keyframes fadeIn {
+   0% {
+      transform: translateX(315px);
+      opacity: 0;
+   }
+   100% {
+      transform: translateX(0);
+      opacity: 1;
+   }
+}
+#toast .toast-msg + .toast-msg {
+   margin-top: 15px;
+}
+#toast .toast-msg .img {
+   display: block;
+   flex-basis: 45px;
+   margin: 0 10px 0 10px;
+}
+#toast .toast-msg .text h3 {
+   margin-top: 5px;
+}
+#toast .toast-msg .text .name,
+#toast .toast-msg .text .number {
+   color: #dc8068;
+   font-size: 1.4rem;
+   margin: 5px 0 5px 0;
+}
+.img-toast {
+   width: 100%;
+   object-fit: cover;
+   border-radius: 20px;
 }

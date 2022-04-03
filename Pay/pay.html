@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Pay</title>
+      <link rel="stylesheet" href="./pay.css" />
+      <link rel="stylesheet" href="../assets/font/fontawesome-pro-6.0.0-beta3-web/css/all.css" />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap"
+         rel="stylesheet"
+      />
+   </head>
+   <body>
+      <main id="content">
+         <div class="content-container">
+            <div class="content-left">
+               <div class="information">
+                  <span>
+                     <img src="../assets/img/checkout_logo.png" alt="" class="image" />
+                  </span>
+                  <h2>Thông tin nhận hàng</h2>
+                  <form action="">
+                     <input type="email" required placeholder="Email" />
+                     <input type="text" required placeholder="Họ và tên" />
+                     <input type="text" required placeholder="Số điện thoại (tuỳ chọn)" />
+                     <input type="text" required placeholder="Địa chỉ (tuỳ chọn)" />
+                     <select name="calc_shipping_provinces" required="">
+                        <option value="">Tỉnh / Thành phố</option>
+                     </select>
+                     <select name="calc_shipping_district" required="" style="margin-bottom: 0">
+                        <option value="">Quận / Huyện</option>
+                     </select>
+                     <input class="billing_address_1" name="" type="hidden" value="" />
+                     <input class="billing_address_2" name="" type="hidden" value="" />
+                     <textarea name="" id="" placeholder="Ghi chú"></textarea>
+                     <input type="submit" value="ĐẶT HÀNG" class="send" />
+                  </form>
+               </div>
+               <div class="delivery">
+                  <h2>Vận chuyển</h2>
+                  <div class="box">
+                     <input type="checkbox" />
+                     <span class="text">Giao hàng tận nơi</span>
+                     <span class="price">40.000₫</span>
+                  </div>
+                  <h2 class="pay">Thanh toán</h2>
+                  <div class="box">
+                     <input type="checkbox" />
+                     <span class="text">Thanh toán khi giao hàng (COD)</span>
+                     <span class="price"><i class="fa-regular fa-receipt"></i></span>
+                  </div>
+               </div>
+            </div>
+            <div class="content-right">
+               <div class="title">
+                  <h2>Đơn hàng</h2>
+               </div>
+               <div class="order">
+                  <div class="item-container"></div>
+               </div>
+               <div class="discount">
+                  <div class="discount-container">
+                     <form action="">
+                        <input type="text" class="input" placeholder="Nhập mã giảm giá" />
+                        <input type="submit" class="send" value="Áp dụng" />
+                     </form>
+                  </div>
+               </div>
+               <div class="payment">
+                  <div class="total-line">
+                     <p>Tạm tính <span class="temp"></span></p>
+                     <p>Phí vận chuyển <span>40.000</span></p>
+                  </div>
+                  <div class="pay">
+                     <p>Tổng cộng <span class="totalPricePay">123</span></p>
+                     <a href="">
+                        <i class="fa-solid fa-chevron-left"></i>
+                        Quay về giỏ hàng
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </main>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/gh/vietblogdao/js/districts.min.js"></script>
+      <script src="./pay.js"></script>
+   </body>
+</html>
