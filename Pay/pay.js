@@ -105,8 +105,8 @@ bill = () => {
       }
       tempPrice.innerHTML = `${formatNumber(total)}.000₫`;
       const totalPricePay = document.querySelector('.totalPricePay');
-      let price = Number(formatNumber(total)) + 0.04;
-      totalPricePay.innerHTML = `${price}.000₫`;
+      let price = Number(total + 40);
+      totalPricePay.innerHTML = `${formatNumber(price)}.000₫`;
    });
 };
 bill();

@@ -307,6 +307,12 @@ body::-webkit-scrollbar-track {
 #content .content-container .product .product-container .item .img {
    display: block;
    min-height: 370px;
+   margin-bottom: 20px;
+   display: flex;
+}
+.image-item {
+   border-bottom-left-radius: 20px;
+   border-bottom-right-radius: 20px;
 }
 #content .content-container .product .product-container .item .information .detail {
    padding: 40px 15px 20px;

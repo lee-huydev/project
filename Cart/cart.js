@@ -23,7 +23,8 @@ renderCart = (id, name, price, src, quantity, totalPrice) => {
 valueCartInLocal = () => {
    for (let valueCart of valueCarts) {
       renderCart(
-         valueCart.number,
+         valueCart.id,
+         // valueCart.number,
          valueCart.name,
          valueCart.price,
          valueCart.img,
@@ -46,7 +47,7 @@ checkNumber = () => {
       element.onclick = () => {
          let attriBute = element.getAttribute('number');
          valueCarts.forEach((e) => {
-            if (Number(e.number) === Number(attriBute)) {
+            if (Number(e.id) === Number(attriBute)) {
                e.quantity = element.value;
                let price = e.price * e.quantity;
                e.totalPrice = price;
@@ -61,7 +62,7 @@ checkNumber = () => {
          if (event.keyCode === 13) {
             let attriBute = element.getAttribute('number');
             valueCarts.forEach((e) => {
-               if (Number(e.number) === Number(attriBute)) {
+               if (Number(e.id) === Number(attriBute)) {
                   e.quantity = element.value;
                   let price = e.price * e.quantity;
                   e.totalPrice = price;

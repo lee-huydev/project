@@ -7,6 +7,7 @@ const product = [
       price: 150,
       name: 'Cafe SÁNG TẠO 8',
       gram: '1 gói 250 gram',
+      id: 10222,
    },
    {
       number: 2,
@@ -14,6 +15,7 @@ const product = [
       price: 179,
       name: 'Cafe SÁNG TẠO 8',
       gram: '1 gói 250 gram',
+      id: 10234,
    },
    {
       number: 3,
@@ -21,6 +23,7 @@ const product = [
       price: 899,
       name: 'Cafe LEGEND',
       gram: '1 gói 150 gram',
+      id: 10223,
    },
    {
       number: 4,
@@ -28,6 +31,7 @@ const product = [
       price: 959,
       name: 'Cafe LEGEND',
       gram: '1 gói 500 gram',
+      id: 10225,
    },
    {
       number: 5,
@@ -35,6 +39,7 @@ const product = [
       price: 79,
       name: 'Cafe Chế Phin Loại 1',
       gram: '1 gói 250 gram',
+      id: 10226,
    },
    {
       number: 6,
@@ -42,6 +47,7 @@ const product = [
       price: 49,
       name: 'Cafe SÁNG TẠO 8',
       gram: '1 gói 340 gram',
+      id: 11457,
    },
    {
       number: 7,
@@ -49,6 +55,7 @@ const product = [
       price: 119,
       name: 'Cafe G7 3 in 1',
       gram: '1 gói 250 gram',
+      id: 10002,
    },
    {
       number: 8,
@@ -56,6 +63,7 @@ const product = [
       price: 99,
       name: 'Cafe truyền thống',
       gram: '1 gói 350 gram',
+      id: 11155,
    },
    {
       number: 9,
@@ -63,6 +71,7 @@ const product = [
       price: 799,
       name: 'Cafe chồn',
       gram: '1 gói 350 gram',
+      id: 10564,
    },
    {
       number: 10,
@@ -70,6 +79,7 @@ const product = [
       price: 49,
       name: 'Cafe Latte',
       gram: '1 gói 250 gram',
+      id: 10336,
    },
    {
       number: 11,
@@ -77,6 +87,7 @@ const product = [
       price: 149,
       name: 'Cafe Espresso',
       gram: '1 gói 250 gram',
+      id: 10221,
    },
    {
       number: 12,
@@ -84,6 +95,7 @@ const product = [
       price: 149,
       name: 'Capuccino',
       gram: '1 gói 150 gram',
+      id: 11134,
    },
 ];
 //! Add item in user to store
@@ -128,7 +140,7 @@ product.map((element) => {
    let contentDiv = `
    <span class="img">
       <img
-      class="image"
+      class="image image-item"
       src="${element.img}"
       alt=""
       />
@@ -142,7 +154,7 @@ product.map((element) => {
       <p>${element.gram}</p>
    </div>
    <div class="buy">
-   <a href="" class="add-cart" number="${element.number}">Mua ngay</a>
+   <a href="" class="add-cart" number="${element.id}">Mua ngay</a>
       <a href=""> Chi tiết</a>
    </div>
 </div>
@@ -160,10 +172,10 @@ for (let addCart of addCarts) {
       numberCart();
       const attriBute = addCart.getAttribute('number');
       product.forEach((e) => {
-         if (e.number == Number(attriBute)) {
+         if (e.id == Number(attriBute)) {
             let obj = {};
             obj = {
-               number: e.number,
+               id: e.id,
                img: e.img,
                name: e.name,
                price: e.price,
@@ -174,14 +186,14 @@ for (let addCart of addCarts) {
                cartLocal.push(obj);
             } else if (cartLocal.length >= 1) {
                let isExist = cartLocal.some((e) => {
-                  return obj.number === e.number;
+                  return obj.id === e.id;
                });
                if (isExist === false) {
                   cartLocal.push(obj);
                } else {
                   let valueLocal = cartLocal;
                   valueLocal.forEach((e) => {
-                     if (e.number === obj.number) {
+                     if (e.id === obj.id) {
                         e.quantity += 1;
                         e.totalPrice = e.price * e.quantity;
                      }
@@ -192,7 +204,7 @@ for (let addCart of addCarts) {
             }
             localStorage.setItem('cart', JSON.stringify(cartLocal));
             cartLocal.forEach((e) => {
-               if (e.number === Number(attriBute)) {
+               if (e.id === Number(attriBute)) {
                   toast(e.img, e.name, e.quantity);
                }
             });
