@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Trang chủ</title>
+
+      <link rel="stylesheet" href="./style.css" />
+
+      <!-- Swiper -->
+      <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+      <!-- Font Awesome -->
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      />
+   </head>
+   <body>
+      <header class="header">
+         <div class="container">
+            <a href="#" class="logo">
+               <img src="../assets/img/logo-main copy.webp" alt="" />
+            </a>
+            <nav class="navbar">
+               <ul class="navlist">
+                  <li><a href="#">Trang chủ</a></li>
+                  <li><a href="../Intro/intro.html">Giới thiệu</a></li>
+                  <li><a href="../News/news.html">Tin tức</a></li>
+                  <li>
+                     <a href="../Store/store.html"
+                        >Cửa hàng <i class="fa fa-angle-down open-close"></i
+                     ></a>
+                  </li>
+                  <li><a href="#">Liên hệ</a></li>
+               </ul>
+
+               <div class="user-cart">
+                  <ul class="list-inline">
+                     <li class="mini-cart">
+                        <a href="" class="fa fa-shopping-cart"></a>
+                     </li>
+                     <li class="search-bar">
+                        <a href="" class="fa fa-search"></a>
+                     </li>
+                     <li class="login-desktop"><a href="" class="fa fa-user"></a></li>
+                     <li class="button-order">
+                        <div class="box">
+                           <i class="fa-solid fa-up-long"></i>
+                           <a href="">Đặt <br />bàn</a>
+                        </div>
+                     </li>
+                  </ul>
+               </div>
+            </nav>
+         </div>
+      </header>
+
+      <main id="main">
+         <div class="hero">
+            <!-- Slider main container -->
+            <div class="swiper">
+               <!-- Additional required wrapper -->
+               <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide">
+                     <img src="../assets/img/background_1.jpg" alt="" />
+                  </div>
+                  <div class="swiper-slide">
+                     <img src="../assets/img/background_2.jpg" alt="" />
+                  </div>
+               </div>
+               <!-- If we need pagination -->
+               <div class="swiper-pagination"></div>
+
+               <!-- If we need navigation buttons -->
+               <div class="swiper-button-prev"></div>
+               <div class="swiper-button-next"></div>
+            </div>
+         </div>
+
+         <section class="coffee__title">
+            <div class="container">
+               <div class="coffee__title-img">
+                  <img src="../assets/img/coffee-house-creative-logo.png" alt="" />
+               </div>
+               <div class="coffee__title-heading in-view">
+                  <h1>
+                     <span>Coffee và tôi</span>
+                  </h1>
+                  <h2>Menu</h2>
+               </div>
+            </div>
+         </section>
+
+         <section class="pricing__table">
+            <div class="container in-view">
+               <div class="pricing__table-left">
+                  <div class="left__img">
+                     <img src="../assets/img/menu_special_morning.png" alt="" />
+                  </div>
+                  <div class="left__content">
+                     <h3>Thức uống đặc biệt</h3>
+                     <p>
+                        Cafe không phải là thú thanh thản như trà, càng không mạnh mẽ bạo liệt như
+                        rượu
+                     </p>
+                  </div>
+               </div>
+               <div class="pricing__table-right">
+                  <div class="cuisine">
+                     <div class="cuisine-container">
+                        <a href="">1 / Cà phê SÁNG TẠO 8</a>
+                        <p>
+                           Từ những hạt cà phê Arabica, Robusta, Excelsa. Có hương thơm đầm, thơm
+                           rất lâu với hậu vị đậm và êm. Là...
+                        </p>
+                        <div class="cuisine-price">Liên hệ</div>
+                     </div>
+                  </div>
+                  <div class="cuisine">
+                     <div class="cuisine-container">
+                        <a href="">2 / Cà phê SÁNG TẠO 8</a>
+                        <p>
+                           Từ những hạt cà phê Arabica, Robusta, Excelsa. Có hương thơm đầm, thơm
+                           rất lâu với hậu vị đậm và êm. Là một...
+                        </p>
+                        <div class="cuisine-price">179.999₫</div>
+                     </div>
+                  </div>
+                  <div class="cuisine">
+                     <div class="cuisine-container">
+                        <a href="">3 / Cà phê LEGEND</a>
+                        <p>
+                           LEGEND là cà phê chồn được sản xuất bằng phương pháp "Lên men sinh học",
+                           sản phẩm chỉ có duy nhất ở Trung Nguyên....
+                        </p>
+                        <div class="cuisine-price">900.000₫</div>
+                     </div>
+                  </div>
+                  <div class="cuisine">
+                     <div class="cuisine-container">
+                        <a href="">4 / Hộp quà LEGEND</a>
+                        <p>
+                           Trong mỗi hộp quà LEGEND gồm có: - Cà phê Legend 225 gram - Phin cà phê
+                           mang hình các danh nhân nổi...
+                        </p>
+                        <div class="cuisine-price">960.000₫</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <section class="orders">
+            <div class="container">
+               <div class="order__item in-view">
+                  <div class="order__item-img">
+                     <img src="../assets/img/order-img-1.webp" alt="" />
+                  </div>
+                  <div class="order__item-text">
+                     <h3><span>Sáng tạo</span> hương và vị</h3>
+                     <a href="#" class="btn-order">Chi tiết</a>
+                  </div>
+               </div>
+               <div class="order__item in-view">
+                  <div class="order__item-img">
+                     <img src="../assets/img/order-img-2.webp" alt="" />
+                  </div>
+                  <div class="order__item-text">
+                     <h3><span>Bánh quy</span> & nhiều hơn</h3>
+                     <a href="#" class="btn-order">Chi tiết</a>
+                  </div>
+               </div>
+               <div class="order__item in-view">
+                  <div class="order__item-img">
+                     <img src="../assets/img/order-img-3.webp" alt="" />
+                  </div>
+                  <div class="order__item-text">
+                     <h3><span>Đặc biệt</span> niềm vui</h3>
+                     <a href="#" class="btn-order">Chi tiết</a>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <section class="book-order">
+            <div class="container">
+               <div class="book-order-item">
+                  <div class="book__order-left">
+                     <h3>Gọi điện giao hàng tận nơi</h3>
+                     <h4><i class="fa fa-volume-control-phone"></i> 1900 6750</h4>
+                  </div>
+                  <div class="book__order-right">
+                     <img src="../assets/img/book-order.webp" alt="" />
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <section class="banner">
+            <div class="container">
+               <div class="banner__img in__view-cupMilk">
+                  <div class="banner__img-1">
+                     <img src="../assets/img/milk-pour2.webp" alt="" />
+                  </div>
+                  <div class="banner__img-2">
+                     <img src="../assets/img/pour-cup.webp" alt="" />
+                  </div>
+                  <div class="banner__img-3">
+                     <img src="../assets/img/milk-drops.webp" alt="" />
+                  </div>
+               </div>
+               <div class="banner__content">
+                  <h3>"COFFEE AND YOU" <br />CỬA HÀNG CÀ PHÊ PREMIUM</h3>
+                  <p>
+                     Cà phê không phải là thú thanh thản như trà, càng không mạnh mẽ bạo liệt như
+                     rượu. Người thưởng thức nhẹ nhàng cho rằng cà phê là gạch nối giữa niềm vui và
+                     nỗi buồn. Với ai đang muộn phiền, cà phê càng day dứt như một bản nhạc có nhiều
+                     dấu lặng. Còn những kẻ môn đồ của giáo phái cà phê thì cho đó là người đàn bà
+                     mang bùa ngải trong mình...
+                  </p>
+                  <a href="#" class="banner-btn">Tìm hiểu thêm</a>
+               </div>
+            </div>
+         </section>
+
+         <section class="coffee__title">
+            <div class="container">
+               <div class="coffee__title-img">
+                  <img src="../assets/img/coffee-house-creative-logo.png" alt="" />
+               </div>
+               <div class="coffee__title-heading in-view">
+                  <h1>
+                     <span>Cửa hàng</span>
+                  </h1>
+                  <h2>Cafe</h2>
+               </div>
+            </div>
+         </section>
+
+         <section class="online__store">
+            <div class="container">
+               <div class="store__product">
+                  <div class="store__product-item">
+                     <div class="item-img">
+                        <img src="../assets/img/product_1.jpeg" alt="" />
+                     </div>
+                     <div class="item-detail">
+                        <div class="product-rate">Liên hệ</div>
+                        <h4>
+                           <a href="/ca-phe-che-phin-loai-1">Cà phê Chế Phin Loại 1</a>
+                        </h4>
+                        <p>1 gói 250 gram</p>
+                     </div>
+                     <div class="item-btn">
+                        <a href="#" class="product-btn product-btn-light">Chi tiết</a>
+                     </div>
+                  </div>
+                  <div class="store__product-item">
+                     <div class="item-img">
+                        <img src="../assets/img/product_2.webp" alt="" />
+                     </div>
+                     <div class="item-detail">
+                        <div class="product-rate">179.999₫</div>
+                        <h4>
+                           <a href="/ca-phe-che-phin-loai-1">Cà phê SÁNG TẠO 8</a>
+                        </h4>
+                        <p>1 gói 350 gram</p>
+                     </div>
+                     <div class="item-btn">
+                        <a href="#" class="product-btn product-btn-dark">Mua ngay</a>
+                        <a href="#" class="product-btn product-btn-light">Chi tiết</a>
+                     </div>
+                  </div>
+                  <div class="store__product-item">
+                     <div class="item-img">
+                        <img src="../assets/img/product_3.jpeg" alt="" />
+                     </div>
+                     <div class="item-detail">
+                        <div class="product-rate">900.000₫</div>
+                        <h4>
+                           <a href="/ca-phe-che-phin-loai-1">Cà phê LEGEND</a>
+                        </h4>
+                        <p>1 gói 150 gram</p>
+                     </div>
+                     <div class="item-btn">
+                        <a href="#" class="product-btn product-btn-dark">Mua ngay</a>
+                        <a href="#" class="product-btn product-btn-light">Chi tiết</a>
+                     </div>
+                  </div>
+                  <div class="store__product-item">
+                     <div class="item-img">
+                        <img src="../assets/img/product_4.webp" alt="" />
+                     </div>
+                     <div class="item-detail">
+                        <div class="product-rate">960.000₫</div>
+                        <h4>
+                           <a href="/ca-phe-che-phin-loai-1">Hộp quà LEGEND</a>
+                        </h4>
+                        <p>1 gói 500 gram</p>
+                     </div>
+                     <div class="item-btn">
+                        <a href="#" class="product-btn product-btn-dark">Mua ngay</a>
+                        <a href="#" class="product-btn product-btn-light">Chi tiết</a>
+                     </div>
+                  </div>
+                  <div class="store__product-item">
+                     <div class="item-img">
+                        <img src="../assets/img/product_5.jpeg" alt="" />
+                     </div>
+                     <div class="item-detail">
+                        <div class="product-rate">80.000₫</div>
+                        <h4>
+                           <a href="/ca-phe-che-phin-loai-1">Cà phê Chế Phin Loại 1</a>
+                        </h4>
+                        <p>1 gói 250 gram</p>
+                     </div>
+                     <div class="item-btn">
+                        <a href="#" class="product-btn product-btn-dark">Mua ngay</a>
+                        <a href="#" class="product-btn product-btn-light">Chi tiết</a>
+                     </div>
+                  </div>
+                  <div class="store__product-item">
+                     <div class="item-img">
+                        <img src="../assets/img/product_6.jpeg" alt="" />
+                     </div>
+                     <div class="item-detail">
+                        <div class="product-rate">50.000₫</div>
+                        <h4>
+                           <a href="/ca-phe-che-phin-loai-1">Cà phê Sáng tạo 1 - 340gr</a>
+                        </h4>
+                        <p>1 gói 340 gram</p>
+                     </div>
+                     <div class="item-btn">
+                        <a href="#" class="product-btn product-btn-dark">Mua ngay</a>
+                        <a href="#" class="product-btn product-btn-light">Chi tiết</a>
+                     </div>
+                  </div>
+                  <div class="store__product-item">
+                     <div class="item-img">
+                        <img src="../assets/img/product_7.webp" alt="" />
+                     </div>
+                     <div class="item-detail">
+                        <div class="product-rate">115.000₫</div>
+                        <h4>
+                           <a href="/ca-phe-che-phin-loai-1">Cà Phê G7 3 in 1</a>
+                        </h4>
+                        <p>1 gói 250 gram</p>
+                     </div>
+                     <div class="item-btn">
+                        <a href="#" class="product-btn product-btn-dark">Hết hàng </a>
+                        <a href="#" class="product-btn product-btn-light">Chi tiết</a>
+                     </div>
+                  </div>
+                  <div class="store__product-item">
+                     <div class="item-img">
+                        <img src="../assets/img/product_8.webp" alt="" />
+                     </div>
+                     <div class="item-detail">
+                        <div class="product-rate">90.000₫</div>
+                        <h4>
+                           <a href="/ca-phe-che-phin-loai-1">Cafe truyền thống </a>
+                        </h4>
+                        <p>1 gói 350 gram</p>
+                     </div>
+                     <div class="item-btn">
+                        <a href="#" class="product-btn product-btn-dark">Chọn Cafe</a>
+                        <a href="#" class="product-btn product-btn-light">Chi tiết</a>
+                     </div>
+                  </div>
+               </div>
+               <div class="text-center">
+                  <a href="#" class="banner-btn">Xem thêm</a>
+               </div>
+            </div>
+         </section>
+
+         <section class="sale">
+            <div class="container">
+               <figure class="offer-detail">
+                  <img src="../assets/img/percent-off.webp" alt="" />
+                  <figcaption>
+                     <p>Trên tất cả các hương vị</p>
+                     <h3>chỉ thứ sáu</h3>
+                     <p>Coupon chỉ có giá trị vào ngày thứ Sáu từ 1/11 - 30/12/2022</p>
+                  </figcaption>
+               </figure>
+               <div class="coupon-code">
+                  <div class="code-wrapper">
+                     <a href="#" class="coupon-button">
+                        <img
+                           src="//bizweb.dktcdn.net/100/159/843/themes/211392/assets/qr-code.jpg?1638342170883"
+                           alt="Trên tất cả các hương vị"
+                        />
+                        <span>coffee and you</span>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <section class="coffee__title">
+            <div class="container">
+               <div class="coffee__title-img">
+                  <img src="../assets/img/coffee-house-creative-logo.png" alt="" />
+               </div>
+               <div class="coffee__title-heading in-view">
+                  <h1>
+                     <span>Đặt bàn</span>
+                  </h1>
+                  <h2>Trực tuyến</h2>
+               </div>
+            </div>
+         </section>
+
+         <section class="table__book">
+            <div class="container">
+               <div class="table__book-img"></div>
+
+               <form action="" class="form">
+                  <h3>Điền thông tin đặt bàn</h3>
+                  <div class="form-group">
+                     <label for="people">Số người</label>
+                     <select name="people" id="people">
+                        <option value="">Chọn</option>
+                        <option value="">2 người</option>
+                        <option value="">4 người</option>
+                        <option value="">Nhiều hơn 4 người</option>
+                     </select>
+                  </div>
+                  <div class="form-group">
+                     <label for="date">Ngày đặt</label>
+                     <input type="date" placeholder="Chọn ngày" />
+                     <!-- <label class="input-group-addon"
+                ><i class="fa fa-calendar"></i
+              ></label> -->
+                  </div>
+                  <div class="form-group">
+                     <div class="col">
+                        <label for="name">Họ tên</label>
+                        <input
+                           type="text"
+                           name="name"
+                           id="name"
+                           placeholder="Họ và tên khác hàng"
+                        />
+                     </div>
+                     <div class="col">
+                        <label for="name">Số điện thoại</label>
+                        <input type="text" name="name" id="name" placeholder="Số điện thoại" />
+                     </div>
+                  </div>
+                  <div class="form-group">
+                     <label for="note">Ghi chú</label>
+                     <textarea
+                        name=""
+                        id=""
+                        cols="30"
+                        rows="10"
+                        placeholder="Ghi chú của khách hàng"
+                     ></textarea>
+                  </div>
+                  <button class="order-btn">Đặt bàn</button>
+               </form>
+            </div>
+         </section>
+
+         <div class="testimonial">
+            <div class="coffee__title">
+               <div class="container">
+                  <div class="coffee__title-img">
+                     <img src="../assets/img/coffee-house-creative-logo.png" alt="" />
+                  </div>
+                  <div class="coffee__title-heading in-view">
+                     <h1>
+                        <span>Cảm nhận</span>
+                     </h1>
+                     <h2>Khách hàng</h2>
+                  </div>
+
+                  <!-- Swiper -->
+                  <div class="swiper mySwiper">
+                     <div class="swiper-wrapper">
+                        <div class="swiper-slide testimonial-card">
+                           <div class="user-detail">
+                              <img src="../assets/img/member1.webp" alt="Trần Minh Phượng" />
+                              <div class="user-detail-text">
+                                 <h3>Trần Minh Phượng</h3>
+                                 <p>
+                                    Để đảm bảo giữ chân khách hàng sành điệu, tôi đã đặt mua thường
+                                    xuyên gói sản phẩm Cafe nguyên chất ESPRESSO BLEND của Coffe And
+                                    You, sạch, ngon mà giá cũng hợp lý
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="swiper-slide testimonial-card">
+                           <div class="user-detail">
+                              <img src="../assets/img/member3.webp" alt="Nguyễn Thảo Mai" />
+                              <div class="user-detail-text">
+                                 <h3>Nguyễn Thảo Mai</h3>
+                                 <p>
+                                    Phục vụ ly cà phê Truyền Thống và Mang Đi hoàn hảo, mọi lúc mọi
+                                    nơi, chúng tôi là dân văn phòng, đã quen và nghiện ly cà phê của
+                                    Coffee And You. Xin cảm ơn cho trải nghiệm cà phê lạ, độc đáo
+                                    này
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="swiper-slide testimonial-card">
+                           <div class="user-detail">
+                              <img src="../assets/img/member2.webp" alt="Tống Ngọc Ánh" />
+                              <div class="user-detail-text">
+                                 <h3>Tống Ngọc Ánh</h3>
+                                 <p>
+                                    Là người sành điệu uống cà phê, nhóm chúng tôi quyết ghé xem
+                                    sao, cà phê ngon thật, quán độc đáo lạ, giá rẻ, cả chưa từng
+                                    trải nghiệm ở đâu,… sẽ ghé lần sau
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="swiper-pagination"></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <section class="coffee__title">
+            <div class="container">
+               <div class="coffee__title-img">
+                  <img src="../assets/img/coffee-house-creative-logo.png" alt="" />
+               </div>
+               <div class="coffee__title-heading in-view">
+                  <h1>
+                     <span>Liên hệ</span>
+                  </h1>
+                  <h2>Cửa hàng</h2>
+               </div>
+            </div>
+         </section>
+
+         <div class="contact-us">
+            <div class="contact-wrapper">
+               <div class="address">
+                  <div class="address-container">
+                     <h2>
+                        <img src="../assets/img/contact-img.webp" alt="" />
+                        <span>Coffe<br />và bạn</span>
+                     </h2>
+                     <h3><span>70</span> Lữ Gia</h3>
+                     <p>Phường 15, Quận 11, Thành Phố Hồ Chí Minh</p>
+                  </div>
+               </div>
+               <div class="map">
+                  <iframe
+                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.5234582838007!2d106.65107031405914!3d10.771162262237965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ec00cfe0fcb%3A0x809917114287f13b!2zNzAgTOG7ryBHaWE!5e0!3m2!1svi!2s!4v1479542851185"
+                     width="100%"
+                     height="300"
+                     frameborder="0"
+                     style="border: 0"
+                     allowfullscreen=""
+                  ></iframe>
+               </div>
+            </div>
+         </div>
+      </main>
+
+      <footer class="footer">
+         <div class="footer__upper">
+            <div class="container">
+               <h2>GHÉ THĂM CỬA HÀNG</h2>
+               <h3>ngày hôm nay</h3>
+               <div>
+                  <img src="../assets/img/logo-cup.png" alt="" />
+               </div>
+               <a
+                  href="
+          "
+                  class="order-btn"
+                  >Vào shop cafe!</a
+               >
+            </div>
+            <nav class="footer-nav">
+               <ul class="footer-nav-list">
+                  <li><a href="#">Trang chủ</a></li>
+                  <li><a href="#">Thực đơn</a></li>
+                  <li><a href="#">Thư viện</a></li>
+                  <li><a href="#">Liên hệ</a></li>
+               </ul>
+            </nav>
+         </div>
+         <div class="footer__lower">
+            <a href="#" class="back-to-top">
+               <i class="fa fa-angle-up"></i>
+            </a>
+            <p>&copy; <span>2020</span> Bản quyền thuộc về Kiến Vàng. Cung cấp bởi Sapo</p>
+         </div>
+      </footer>
+
+      <script src="https://unpkg.com/scrollreveal"></script>
+
+      <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+      <script src="./script.js"></script>
+   </body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Sign up</title>
+      <link rel="stylesheet" href="./admin.css" />
+      <link rel="stylesheet" href="../assets/font/fontawesome-pro-6.0.0-beta3-web/css/all.css" />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap"
+         rel="stylesheet"
+      />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Beau+Rivage&display=swap"
+         rel="stylesheet"
+      />
+   </head>
+   <body>
+      <header id="header">
+         <div class="header-container">
+            <h2>Xin chào: Admin</h2>
+            <div class="page-location">
+               <a href="../Intro/intro.html">
+                  <i class="fa-solid fa-house-heart"></i>
+                  Trang chủ
+               </a>
+               <a href="" class="emty">
+                  <i class="fa-solid fa-power-off"></i>
+                  Đăng xuất
+               </a>
+            </div>
+         </div>
+      </header>
+      <main id="content">
+         <div class="content-container">
+            <div class="menu">
+               <h3>Menu</h3>
+               <div class="menu-content">
+                  <ul class="list">
+                     <li>
+                        <span class="manage">
+                           Quản lý sản phẩm
+                           <i class="fa-solid fa-caret-down"></i>
+                        </span>
+                        <ul class="list-child">
+                           <li class="add-product">Thêm sản phẩm</li>
+                           <li class="emty">Đơn hàng</li>
+                        </ul>
+                     </li>
+                     <li>
+                        <span class="emty">
+                           Quản lý danh mục
+                           <i class="fa-solid fa-caret-down"></i>
+                        </span>
+                     </li>
+                     <li>
+                        <span class="emty">
+                           Giao diện
+                           <i class="fa-solid fa-caret-down"></i>
+                        </span>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="product">
+               <h3>Danh sách sản phẩm</h3>
+               <div class="content-product">
+                  <button class="add-items">Thêm sản phẩm</button>
+                  <table class="table">
+                     <thead>
+                        <tr>
+                           <th>STT</th>
+                           <th>Ảnh</th>
+                           <th>Tên sản phẩm</th>
+                           <th>Giá</th>
+                           <th>Sửa</th>
+                           <th>Xoá</th>
+                        </tr>
+                     </thead>
+                     <tbody class="tbody"></tbody>
+                  </table>
+               </div>
+            </div>
+         </div>
+      </main>
+      <div id="toastId"></div>
+      <div id="modal-addProduct">
+         <div class="modal-container">
+            <div class="content">
+               <div class="title">
+                  <h2>Thông tin sản phẩm</h2>
+               </div>
+               <form class="form">
+                  <label for="">Tên sản phẩm</label>
+                  <input type="text" required class="name" />
+                  <label for="">Hình ảnh (link)</label>
+                  <input type="url" required placeholder="https://example.com" class="img" />
+                  <label for="">Giá (vnđ)</label>
+                  <input type="text" required class="price" />
+                  <label for="">Khối lượng (gam)</label>
+                  <input type="text" class="mass" />
+                  <label for="">Số thứ tự</label>
+                  <input type="number" required class="number" />
+                  <input type="submit" value="Thêm" class="submit" />
+                  <a href="" class="back">Quay lại</a>
+               </form>
+            </div>
+         </div>
+      </div>
+      <script src="./admin.js"></script>
+   </body>
+</html>

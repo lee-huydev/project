@@ -1,25 +1,5 @@
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
-// ! View
-const items = document.querySelectorAll('.item-js');
-const observer = new IntersectionObserver(
-   (entris) => {
-      entris.forEach((entry) => {
-         const { target } = entry;
-         target.classList.toggle('active', entry.isIntersecting);
-         if (target.classList.toggle('active', entry.isIntersecting)) {
-            observer.unobserve(target);
-         }
-      });
-   },
-   {
-      rootMargin: '0px 0px -30% 0px',
-   }
-);
-items.forEach(function (element) {
-   observer.observe(element);
-});
-
 // !Search
 $('.search-js').addEventListener('click', (e) => {
    e.preventDefault();
@@ -98,3 +78,21 @@ let newLocal = function (value) {
    let newLocal = value;
    return newLocal;
 };
+
+$('.form-signup').addEventListener('click', (e) => {
+   e.preventDefault();
+});
+//! User login
+
+const signup = $('.sign-up');
+signup.addEventListener('click', (e) => {
+   e.preventDefault();
+   const username = $('.username').value;
+   const pass = $('.pass').value;
+   if (username === 'admin@@' && pass === 'admin123') {
+      location.replace('../Admin/admin.html');
+   } else {
+      alert('Wrong');
+      location.reload();
+   }
+});

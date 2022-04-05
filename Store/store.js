@@ -86,6 +86,20 @@ const product = [
       gram: '1 gói 150 gram',
    },
 ];
+//! Add item in user to store
+const itemsLocal = JSON.parse(localStorage.getItem('items'));
+if (itemsLocal && itemsLocal.length !== 0) {
+   itemsLocal.forEach((e) => {
+      product.push(e);
+   });
+}
+//! Add product in local then render in admin
+// const productToAdmin = [];
+// product.forEach((e) => {
+//    productToAdmin.push(e);
+//    localStorage.setItem('product', JSON.stringify(productToAdmin));
+// });
+
 //! Add Number items above cart
 const valueCart = JSON.parse(localStorage.getItem('cart'));
 if (!valueCart || valueCart.length === 0) {
@@ -97,11 +111,13 @@ let totalItems = 0;
 numberCart = () => {
    totalItems += 1;
    $('.quantity-item').innerHTML = totalItems;
+   localStorage.setItem('totalItem', JSON.stringify(totalItems));
 };
 if (valueCart) {
    valueCart.forEach((e) => {
-      totalItems += e.quantity;
+      totalItems += Number(e.quantity);
       $('.quantity-item').innerHTML = totalItems;
+      localStorage.setItem('totalItem', JSON.stringify(totalItems));
    });
 }
 //! Render items
@@ -110,13 +126,13 @@ product.map((element) => {
    div.classList.add('item');
    $('.product-container').appendChild(div);
    let contentDiv = `
-   <a class="img" href="">
-   <img
+   <span class="img">
+      <img
       class="image"
       src="${element.img}"
       alt=""
-   />
-</a>
+      />
+</span>
 <div class="information">
    <div class="detail">
       <div class="price">
@@ -133,6 +149,7 @@ product.map((element) => {
    `;
    div.innerHTML = contentDiv;
 });
+
 // ! Add cart
 const addCarts = $$('.add-cart');
 let cartLocal = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];

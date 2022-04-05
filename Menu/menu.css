@@ -129,6 +129,7 @@ body::-webkit-scrollbar-track {
 #header .header-container .cart {
    display: flex;
    align-items: center;
+   position: relative;
 }
 #header .header-container .cart a {
    text-decoration: none;
@@ -139,9 +140,71 @@ body::-webkit-scrollbar-track {
    text-transform: uppercase;
    font-weight: 500;
 }
+#header .header-container .cart a:nth-child(1):hover,
 #header .header-container .cart a:nth-child(2):hover,
 #header .header-container .cart a:nth-child(3):hover {
    color: #dc8068;
+}
+#header .header-container .cart a:nth-child(3):hover > .signup-form {
+   display: block;
+}
+#header .header-container .cart a:nth-child(3) .signup-form {
+   position: absolute;
+   bottom: -220px;
+   right: 0;
+   width: 300px;
+   height: 220px;
+   border-radius: 15px;
+   background-color: white;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   font-family: 'Montserrat', sans-serif;
+   display: none;
+}
+.signup-form h3 {
+   margin: 20px auto 10px;
+   width: fit-content;
+   color: black;
+   font-size: 1.4rem;
+   font-weight: 500;
+}
+.signup-form .form-signup {
+   width: 250px;
+   margin: 0 auto;
+}
+.signup-form .form-signup label {
+   color: black;
+   font-size: 1rem;
+}
+.signup-form .form-signup input {
+   width: 100%;
+   margin: 5px 0;
+   padding: 3px 5px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+}
+.signup-form .form-signup .sign-row {
+   width: 200px;
+   margin: 5px auto;
+   display: flex;
+   gap: 10px;
+}
+.signup-form .form-signup .sign-row input {
+   border: none;
+   border-radius: 10px;
+   padding: 6px 10px;
+   cursor: pointer;
+   color: white;
+}
+.signup-form .form-signup .sign-row input:hover {
+   background-color: transparent;
+   border: 1px solid #dc8068;
+   color: #dc8068;
+}
+.signup-form .form-signup .sign-row .sign-up {
+   background-color: #dc8068;
+}
+.signup-form .form-signup .sign-row .sign-in {
+   background-color: #664d42;
 }
 #header .header-container .cart a:last-child {
    position: relative;
@@ -422,7 +485,7 @@ body::-webkit-scrollbar-track {
 }
 #footer .visit {
    padding: 40px 0;
-   background-image: url(../img/footer-bgs.webp);
+   background-image: url(../assets/img/footer-bgs.webp);
    background-repeat: no-repeat;
    background-position: center;
    background-size: cover;
