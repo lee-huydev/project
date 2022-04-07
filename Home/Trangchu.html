@@ -14,46 +14,82 @@
       <!-- Font Awesome -->
       <link
          rel="stylesheet"
-         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+         href="../assets/font/fontawesome-pro-6.0.0-beta3-web/css/all.min.css"
       />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@300;500&display=swap"
+         rel="stylesheet"
+      />
+      <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet" />
    </head>
    <body>
-      <header class="header">
-         <div class="container">
-            <a href="#" class="logo">
-               <img src="../assets/img/logo-main copy.webp" alt="" />
-            </a>
-            <nav class="navbar">
-               <ul class="navlist">
+      <header id="header">
+         <div class="header-container">
+            <div class="logo">
+               <img class="image image-mobile" src="../assets/img/logo-main.webp" alt="" />
+            </div>
+            <div class="navbar">
+               <ul>
                   <li><a href="#">Trang chủ</a></li>
                   <li><a href="../Intro/intro.html">Giới thiệu</a></li>
                   <li><a href="../News/news.html">Tin tức</a></li>
                   <li>
                      <a href="../Store/store.html"
-                        >Cửa hàng <i class="fa fa-angle-down open-close"></i
+                        >Cửa hàng <i class="fa-regular fa-angle-down"></i
                      ></a>
+                     <ul>
+                        <li><a href="../Menu/menu.html">thực đơn cafe</a></li>
+                     </ul>
                   </li>
-                  <li><a href="#">Liên hệ</a></li>
+                  <li><a href="">Liên hệ</a></li>
                </ul>
-
-               <div class="user-cart">
-                  <ul class="list-inline">
-                     <li class="mini-cart">
-                        <a href="" class="fa fa-shopping-cart"></a>
-                     </li>
-                     <li class="search-bar">
-                        <a href="" class="fa fa-search"></a>
-                     </li>
-                     <li class="login-desktop"><a href="" class="fa fa-user"></a></li>
-                     <li class="button-order">
-                        <div class="box">
-                           <i class="fa-solid fa-up-long"></i>
-                           <a href="">Đặt <br />bàn</a>
+            </div>
+            <div class="cart">
+               <a href="../Cart/cart.html">
+                  <i class="fa-solid fa-cart-shopping quantity">
+                     <span class="quantity-item">1</span>
+                  </i>
+               </a>
+               <a href="" class="search-js">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+               </a>
+               <a href="">
+                  <i class="fa-solid fa-user"></i>
+                  <div class="signup-form">
+                     <h3>Đăng nhập</h3>
+                     <form action="" class="form-signup">
+                        <label for="">Tên đăng nhập</label>
+                        <input type="text" class="username" />
+                        <label for="">Mật khẩu</label>
+                        <input type="password" class="pass" />
+                        <div class="sign-row">
+                           <input type="submit" class="sign-up" value="Đăng nhập" />
+                           <input type="submit" class="sign-in" value="Đăng ký" />
                         </div>
-                     </li>
-                  </ul>
-               </div>
-            </nav>
+                     </form>
+                  </div>
+               </a>
+               <a href="">Đặt bàn</a>
+               <span class="menu-mobile"><i class="fa-solid fa-bars"></i></span>
+            </div>
+         </div>
+         <div class="menu-drop">
+            <div class="menu-drop__container">
+               <ul class="list-parent">
+                  <li><a href="#">Trang chủ</a></li>
+                  <li><a href="../Intro/intro.html">Giới thiệu</a></li>
+                  <li><a href="../News/news.html">Tin tức</a></li>
+                  <li>
+                     <a href="../Store/store.html"
+                        >Cửa hàng <span><i class="fa-solid fa-caret-down"></i></span
+                     ></a>
+                     <ul class="list-child">
+                        <li><a href="../Menu/menu.html">Thực đơn cafe</a></li>
+                     </ul>
+                  </li>
+                  <li><a href="../Contact/contact.html">Liên hệ</a></li>
+               </ul>
+            </div>
          </div>
       </header>
 
@@ -83,7 +119,11 @@
          <section class="coffee__title">
             <div class="container">
                <div class="coffee__title-img">
-                  <img src="../assets/img/coffee-house-creative-logo.png" alt="" />
+                  <img
+                     src="../assets/img/coffee-house-creative-logo.png"
+                     alt=""
+                     class="image-width"
+                  />
                </div>
                <div class="coffee__title-heading in-view">
                   <h1>
@@ -255,6 +295,7 @@
                         <p>1 gói 250 gram</p>
                      </div>
                      <div class="item-btn">
+                        <a href="#" class="product-btn product-btn-dark">Mua ngay</a>
                         <a href="#" class="product-btn product-btn-light">Chi tiết</a>
                      </div>
                   </div>
@@ -366,7 +407,7 @@
                         <p>1 gói 350 gram</p>
                      </div>
                      <div class="item-btn">
-                        <a href="#" class="product-btn product-btn-dark">Chọn Cafe</a>
+                        <a href="#" class="product-btn product-btn-dark">Mua Ngay</a>
                         <a href="#" class="product-btn product-btn-light">Chi tiết</a>
                      </div>
                   </div>
@@ -552,7 +593,7 @@
                   <div class="address-container">
                      <h2>
                         <img src="../assets/img/contact-img.webp" alt="" />
-                        <span>Coffe<br />và bạn</span>
+                        <span>Coffe và bạn</span>
                      </h2>
                      <h3><span>70</span> Lữ Gia</h3>
                      <p>Phường 15, Quận 11, Thành Phố Hồ Chí Minh</p>
