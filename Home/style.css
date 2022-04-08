@@ -298,12 +298,11 @@ img {
 }
 #header .header-container .cart a .quantity .quantity-item {
    position: absolute;
-   position: absolute;
    font-family: 'Montserrat', sans-serif;
    font-weight: 500;
-   top: -12px;
+   top: -15px;
    right: -8px;
-   padding: 1px 4px;
+   padding: 2px 4px;
    background-color: #dc8068;
    border-radius: 50%;
    font-size: 1.4rem;

@@ -116,6 +116,8 @@ delItems.forEach((e) => {
 // ! Menu
 $('.add-product').addEventListener('click', () => {
    $('.product').classList.add('active');
+   $('.manage-order').classList.remove('active2');
+   $('.bill-order').style.color = 'black';
    $('.add-product').style.color = '#dc8068';
 });
 
@@ -141,3 +143,65 @@ emty.forEach((e) => {
       toast();
    });
 });
+
+//! Bill order
+$('.bill-order').addEventListener('click', () => {
+   $('.product').classList.remove('active');
+   $('.manage-order').classList.add('active2');
+   $('.add-product').style.color = 'black';
+   $('.bill-order').style.color = '#dc8068';
+   $('.menu').style.display = 'none';
+   $('.back').style.display = 'block';
+});
+$('.back-admin').onclick = () => {
+   location.reload();
+};
+const customer = JSON.parse(localStorage.getItem('customer'));
+if (customer.length !== 0 && customer !== null) {
+   $('.emty-item').style.display = 'none';
+   $('.no-emty').style.display = 'block';
+   const tbody = document.createElement('tbody');
+   $('.table-order').appendChild(tbody);
+   tbody.classList.add('tbody', 'customer-order');
+   let i = 0;
+   customer.forEach((e, index) => {
+      i++;
+      const tr = document.createElement('tr');
+      let element = `
+      <td>${i}</td>
+      <td>
+         Email: ${e.information.email} <br />
+         Họ và tên: ${e.information.name} <br />
+         SĐT: ${e.information.phone} <br />
+         Địa chỉ: ${e.information.add}, ${e.information.district}, ${e.information.country}
+      </td>
+      <td class="customer">
+      </td>
+      <td>${e.information.time}</td>
+      <td>${e.information.note}</td>
+      <td class="money">1</td>
+      `;
+      tr.innerHTML = element;
+      $('.customer-order').appendChild(tr);
+      let x = 0;
+      let price = 0;
+      e.items.forEach((d) => {
+         price += d.totalPrice;
+         x++;
+         const b = document.createElement('b');
+         b.innerHTML = `${x}/ ${d.name}`;
+         const span = document.createElement('span');
+         span.innerHTML = `- Số lượng: ${d.quantity}`;
+         const customers = $$('.customer');
+         customers[index].appendChild(b);
+         customers[index].appendChild(span);
+      });
+      const moneys = $$('.money');
+      function formatNumber(num) {
+         var n = Number(num);
+         return n.toLocaleString('vi');
+      }
+      price += 40.0;
+      moneys[index].innerHTML = `${formatNumber(price)}.000đ`;
+   });
+}

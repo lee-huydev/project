@@ -115,10 +115,45 @@ const email = document.querySelector('.email');
 const name = document.querySelector('.name');
 const phone = document.querySelector('.phone');
 const add = document.querySelector('.add');
+const countrys = document.querySelector('.country-value');
+const districtValue = document.querySelector('.district-value');
+const option = document.querySelectorAll('option');
+const note = document.querySelector('.note');
+const customer = localStorage.getItem('customer')
+   ? JSON.parse(localStorage.getItem('customer'))
+   : [];
 sendOrder.onclick = (e) => {
+   let items = JSON.parse(localStorage.getItem('cart'));
+   const date = new Date();
+   const currentTime =
+      date.getHours() +
+      ':' +
+      date.getMinutes() +
+      ', ' +
+      date.getDate() +
+      '/' +
+      (date.getMonth() + 1) +
+      '/' +
+      date.getFullYear();
    if (email.value !== '' && name.value !== '' && phone.value !== '' && add.value !== '') {
       e.preventDefault();
+      const obj = {
+         information: {
+            email: email.value,
+            name: name.value,
+            phone: phone.value,
+            add: add.value,
+            country: option[countrys.value].innerHTML,
+            district: districtValue.value,
+            note: note.value,
+            time: currentTime,
+         },
+         items,
+      };
+      customer.push(obj);
+      localStorage.setItem('customer', JSON.stringify(customer));
       localStorage.removeItem('cart');
       location.replace('../Store/store.html');
+      items = [];
    }
 };

@@ -20,7 +20,7 @@ const product = [
    {
       number: 3,
       img: '../assets/img/colombiadecafproduktbildhemsid.jpeg',
-      price: 899,
+      price: 900,
       name: 'Cafe LEGEND',
       gram: '1 gói 150 gram',
       id: 10223,
@@ -28,7 +28,7 @@ const product = [
    {
       number: 4,
       img: '../assets/img/caravanproduktbild5721x3455326-c84e5abb-aa0f-4f47-8bfc-ee3e74689f70.webp',
-      price: 959,
+      price: 960,
       name: 'Cafe LEGEND',
       gram: '1 gói 500 gram',
       id: 10225,
@@ -36,7 +36,7 @@ const product = [
    {
       number: 5,
       img: '../assets/img/buenavistaproduktbild5721x3455.jpeg',
-      price: 79,
+      price: 80,
       name: 'Cafe Chế Phin Loại 1',
       gram: '1 gói 250 gram',
       id: 10226,
@@ -44,15 +44,15 @@ const product = [
    {
       number: 6,
       img: '../assets/img/brazilfortalezaproduktbildhems.jpeg',
-      price: 49,
-      name: 'Cafe SÁNG TẠO 8',
+      price: 50,
+      name: 'Cafe SÁNG TẠO 1',
       gram: '1 gói 340 gram',
       id: 11457,
    },
    {
       number: 7,
       img: '../assets/img/bourbonjungleproduktbild5721x3-9162173b-31d3-46b2-a303-56f78b557aca.webp',
-      price: 119,
+      price: 115,
       name: 'Cafe G7 3 in 1',
       gram: '1 gói 250 gram',
       id: 10002,
@@ -60,7 +60,7 @@ const product = [
    {
       number: 8,
       img: '../assets/img/esperanzaproduktbild5700x34553-48d8cf11-46d5-4ee2-978d-cb640f1f7364.webp',
-      price: 99,
+      price: 90,
       name: 'Cafe truyền thống',
       gram: '1 gói 350 gram',
       id: 11155,
@@ -68,7 +68,7 @@ const product = [
    {
       number: 9,
       img: '../assets/img/ethiopiagujiproduktbildhemsida-91aadddb-8d8d-4139-a367-a8dbc3b65ebe.jpeg',
-      price: 799,
+      price: 800,
       name: 'Cafe chồn',
       gram: '1 gói 350 gram',
       id: 10564,
@@ -76,7 +76,7 @@ const product = [
    {
       number: 10,
       img: '../assets/img/ethiopiagujiproduktbildhemsida-91aadddb-8d8d-4139-a367-a8dbc3b65ebe.jpeg',
-      price: 49,
+      price: 40,
       name: 'Cafe Latte',
       gram: '1 gói 250 gram',
       id: 10336,
@@ -84,7 +84,7 @@ const product = [
    {
       number: 11,
       img: '../assets/img/fikaproduktbild5721x3455326x54.jpeg',
-      price: 149,
+      price: 150,
       name: 'Cafe Espresso',
       gram: '1 gói 250 gram',
       id: 10221,
@@ -92,7 +92,7 @@ const product = [
    {
       number: 12,
       img: '../assets/img/ftoproduktbild5721x3455326x540.jpeg',
-      price: 149,
+      price: 250,
       name: 'Capuccino',
       gram: '1 gói 150 gram',
       id: 11134,

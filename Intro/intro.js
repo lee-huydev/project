@@ -79,11 +79,10 @@ let newLocal = function (value) {
    return newLocal;
 };
 
+//! User login
 $('.form-signup').addEventListener('click', (e) => {
    e.preventDefault();
 });
-//! User login
-
 const signup = $('.sign-up');
 signup.addEventListener('click', (e) => {
    e.preventDefault();

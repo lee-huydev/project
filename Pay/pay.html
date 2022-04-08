@@ -31,15 +31,20 @@
                         placeholder="Số điện thoại (tuỳ chọn)"
                      />
                      <input class="add" type="text" required placeholder="Địa chỉ (tuỳ chọn)" />
-                     <select name="calc_shipping_provinces" required="">
+                     <select name="calc_shipping_provinces" class="country-value" required="">
                         <option value="">Tỉnh / Thành phố</option>
                      </select>
-                     <select name="calc_shipping_district" required="" style="margin-bottom: 0">
+                     <select
+                        name="calc_shipping_district"
+                        class="district-value"
+                        required=""
+                        style="margin-bottom: 0"
+                     >
                         <option value="">Quận / Huyện</option>
                      </select>
                      <input class="billing_address_1" name="" type="hidden" value="" />
                      <input class="billing_address_2" name="" type="hidden" value="" />
-                     <textarea name="" id="" placeholder="Ghi chú"></textarea>
+                     <textarea name="" id="" class="note" placeholder="Ghi chú"></textarea>
                      <input type="submit" value="ĐẶT HÀNG" class="send" />
                   </form>
                </div>
