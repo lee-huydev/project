@@ -402,6 +402,7 @@ html {
    #content .content-container .content-left {
       border: none;
       flex-direction: column;
+      padding: 0 10px;
    }
    #content .content-container .content-left .delivery,
    #content .content-container .content-right .discount,
