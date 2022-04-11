@@ -574,3 +574,48 @@ body::-webkit-scrollbar-track {
    display: block;
    color: #988e89;
 }
+#toastId {
+   position: fixed;
+   top: 100px;
+   right: 0;
+   z-index: 9999;
+}
+#toastId .toast-msg {
+   width: 300px;
+   height: 70px;
+   padding: 5px;
+   border-radius: 10px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-left: 20px solid #c7c729;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   animation: fadeIn 0.5s ease;
+   transition: all 0.8s ease-in-out;
+   background-color: white;
+}
+#toastId .toast-msg p {
+   font-size: 1.4rem;
+   position: relative;
+}
+#toastId .toast-msg p::before {
+   content: '\21';
+   font-family: 'FontAweSome';
+   position: absolute;
+   left: -15px;
+   bottom: 5px;
+   font-size: 2rem;
+}
+#toastId .toast-msg + .toast-msg {
+   margin-top: 10px;
+}
+@keyframes fadeIn {
+   0% {
+      opacity: 0;
+      transform: translateX(290px);
+   }
+   100% {
+      opacity: 1;
+      transform: translateX(0);
+   }
+}

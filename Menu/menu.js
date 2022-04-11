@@ -19,3 +19,22 @@ const observer = new IntersectionObserver(
 items.forEach(function (element) {
    observer.observe(element);
 });
+
+// ! Toast
+toast = () => {
+   const div = document.createElement('div');
+   const toast = $('#toastId');
+   div.classList.add('toast-msg');
+   toast.appendChild(div);
+   div.innerHTML = '<p>Xin lỗi về sự bất tiện này, vui lòng vào cửa hàng để mua sản phẩm</p>';
+   setTimeout(function () {
+      div.remove();
+   }, 3000);
+};
+const btnBuy = $$('.btn-buy');
+btnBuy.forEach((e) => {
+   e.addEventListener('click', (event) => {
+      event.preventDefault();
+      toast();
+   });
+});

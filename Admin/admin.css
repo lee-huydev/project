@@ -148,6 +148,11 @@ html {
    margin-top: 30px;
    flex-grow: 1;
 }
+#content .content-container .manage-order h4 {
+   text-align: center;
+   margin: 10px 0 20px;
+   font-size: 1.8rem;
+}
 #content .content-container .manage-order .content-product .table thead th:nth-child(2) {
    width: 350px !important;
 }
@@ -210,6 +215,9 @@ html {
    width: 100%;
    border-collapse: collapse;
    font-size: 1.2rem;
+}
+#content .content-container .product .content-product .table-order {
+   margin-top: 0;
 }
 #content .content-container .product .content-product .table thead th {
    padding: 10px 20px;
@@ -360,3 +368,15 @@ html {
    opacity: 0.5;
    cursor: pointer;
 }
+#content .content-container .manage-order .chart {
+   max-width: 1024px;
+   margin: 0 auto;
+}
+
+/* #content .content-container #myChart {
+   display: block !important;
+}
+
+/* @media screen and (max-width:1023px) and (min-width: 740px) {
+
+} */

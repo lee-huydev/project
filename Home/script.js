@@ -98,3 +98,51 @@ signup.addEventListener('click', (e) => {
       location.reload();
    }
 });
+// ! Toast
+toast = () => {
+   const div = document.createElement('div');
+   const toast = $('#toastId');
+   div.classList.add('toast-msg');
+   toast.appendChild(div);
+   div.innerHTML = '<p>Xin lỗi về sự bất tiện này, vui lòng vào cửa hàng để mua sản phẩm</p>';
+   setTimeout(function () {
+      div.remove();
+   }, 3000);
+};
+const btnBuy = document.querySelectorAll('.product-btn');
+btnBuy.forEach((e) => {
+   e.addEventListener('click', (e) => {
+      e.preventDefault();
+      toast();
+   });
+});
+
+//! Modal
+const people = $('#people');
+const names = $('#name');
+const phone = $('#phone');
+const date = $('.date');
+const note = $('#note');
+const modalContent = $('.content-modal');
+$('.order-btn').addEventListener('click', (e) => {
+   if (people.value !== '' && names.value !== '' && phone.value !== '' && date.value !== '') {
+      e.preventDefault();
+      $('#modal-order').classList.add('active');
+      let infor = `
+      <h3>
+                  <i class="fa-solid fa-user-check"></i>
+                  Thông tin đặt bàn
+               </h3>
+               <p>Họ và tên: ${names.value}</p>
+               <p>SĐT: ${phone.value}</p>
+               <p>Số người: ${people.value}</p>
+               <p>Ngày đặt: ${date.value}</p>
+               <p>Ghi chú: ${note.value}</p>
+      `;
+      modalContent.innerHTML = infor;
+   }
+   $('.ok').onclick = () => {
+      $('#modal-order').classList.remove('active');
+      location.reload();
+   };
+});

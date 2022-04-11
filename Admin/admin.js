@@ -205,3 +205,68 @@ if (customer.length !== 0 && customer !== null) {
       moneys[index].innerHTML = `${formatNumber(price)}.000đ`;
    });
 }
+
+//! chart
+let value = [];
+
+const valueCustomer = JSON.parse(localStorage.getItem('customer'));
+valueCustomer.forEach((e) => {
+   e.items.forEach((d) => {
+      value.push(d);
+   });
+});
+const valueChart = value.map((h) => {
+   let obj = {
+      id: h.id,
+      name: h.name,
+      quantity: h.quantity,
+   };
+   return obj;
+});
+
+valueChart.forEach((e, index) => {
+   for (let i = index + 1; i < valueChart.length; i++) {
+      if (e.id === valueChart[i].id) {
+         e.quantity += valueChart[i].quantity;
+         valueChart.splice(i, 1);
+      }
+   }
+});
+const labels = [];
+const data = [];
+valueChart.forEach((e) => {
+   labels.push(e.name);
+   data.push(e.quantity);
+});
+const ctx = document.getElementById('myChart').getContext('2d');
+let gradient = ctx.createLinearGradient(0, 0, 0, 400);
+gradient.addColorStop(0, 'rgba(236,135,14,1');
+gradient.addColorStop(1, 'rgba(0,174,114, 0.5');
+const chart = {
+   labels,
+   datasets: [
+      {
+         data: data,
+         label: 'Số lượng',
+      },
+   ],
+};
+const config = {
+   type: 'line',
+   data: chart,
+   options: {
+      reponsive: true,
+      fill: true,
+      backgroundColor: gradient,
+      animation: {
+         tension: {
+            duration: 1500,
+            easing: 'linear',
+            from: 0,
+            to: 0.4,
+            loop: false,
+         },
+      },
+   },
+};
+const myChart = new Chart(ctx, config);
