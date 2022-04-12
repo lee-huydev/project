@@ -368,6 +368,9 @@ a {
    display: block;
    color: #988e89;
 }
+#header .menu-drop {
+   display: none;
+}
 
 /* !Reponsive */
 @media screen and (max-width: 1023px) and (min-width: 740px) {

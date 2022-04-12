@@ -520,7 +520,9 @@ body::-webkit-scrollbar-track {
    display: block;
    color: #988e89;
 }
-
+#header .menu-drop {
+   display: none;
+}
 @media screen and (max-width: 1023px) {
    html {
       font-size: 55%;
