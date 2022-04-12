@@ -26,7 +26,7 @@
       <header id="header">
          <div class="header-container">
             <div class="logo">
-               <img class="image" src="../assets/img/logo-main.webp" alt="" />
+               <img class="image image-mobile" src="../assets/img/logo-main.webp" alt="" />
             </div>
             <div class="navbar">
                <ul>
@@ -46,7 +46,9 @@
             </div>
             <div class="cart">
                <a href="../Cart/cart.html">
-                  <i class="fa-solid fa-cart-shopping"></i>
+                  <i class="fa-solid fa-cart-shopping quantity">
+                     <span class="quantity-item">1</span>
+                  </i>
                </a>
                <a href="" class="search-js">
                   <i class="fa-solid fa-magnifying-glass"></i>
@@ -68,6 +70,25 @@
                   </div>
                </a>
                <a href="">Đặt bàn</a>
+               <span class="menu-mobile"><i class="fa-solid fa-bars"></i></span>
+            </div>
+         </div>
+         <div class="menu-drop">
+            <div class="menu-drop__container">
+               <ul class="list-parent">
+                  <li><a href="../index.html">Trang chủ</a></li>
+                  <li><a href="../Intro/intro.html">Giới thiệu</a></li>
+                  <li><a href="../News/news.html">Tin tức</a></li>
+                  <li>
+                     <a href="../Store/store.html"
+                        >Cửa hàng <span><i class="fa-solid fa-caret-down"></i></span
+                     ></a>
+                     <ul class="list-child">
+                        <li><a href="../Menu/menu.html">Thực đơn cafe</a></li>
+                     </ul>
+                  </li>
+                  <li><a href="../Contact/contact.html">Liên hệ</a></li>
+               </ul>
             </div>
          </div>
       </header>
@@ -111,8 +132,7 @@
                            <a href="">1 / Cafe SÁNG TẠO 8</a>
                            <p>
                               Từ những hạt cà phê Arabica, Robusta, Excelsa. Có hương thơm đầm, thơm
-                              rất lâu... Từ những hạt cà phê Arabica, Robusta, Excelsa. Có hương
-                              thơm đầm, thơm rất lâu...
+                              rất lâu...
                            </p>
                            <span>0₫</span>
                            <div class="cuisine-btn">
@@ -126,11 +146,6 @@
                         <div class="cuisine-container">
                            <a href="">2 / Cafe SÁNG TẠO 8</a>
                            <p>
-                              Từ những hạt cà phê Arabica, Robusta, Excelsa. Có hương thơm đầm, thơm
-                              rất lâu... Từ những hạt cà phê Arabica, Robusta, Excelsa. Có hương
-                              thơm đầm, thơm rất lâu... Từ những hạt cà phê Arabica, Robusta,
-                              Excelsa. Có hương thơm đầm, thơm rất lâu... Từ những hạt cà phê
-                              Arabica, Robusta, Excelsa. Có hương thơm đầm, thơm rất lâu... lâu...
                               Từ những hạt cà phê Arabica, Robusta, Excelsa. Có hương thơm đầm, thơm
                               rất lâu...
                            </p>
@@ -732,7 +747,7 @@
                <div class="logo">
                   <img class="image" src="../assets/img/logo-cup.png" alt="" />
                </div>
-               <a href="" class="btn">vào shop cafe !</a>
+               <a href="../Store/store.html" class="btn">vào shop cafe !</a>
                <div class="footer-nav">
                   <ul>
                      <li><a href="">trang chủ</a></li>

@@ -38,3 +38,21 @@ btnBuy.forEach((e) => {
       toast();
    });
 });
+
+//! Menu Mobile
+$('.menu-mobile').addEventListener('click', () => {
+   $('.menu-drop').classList.toggle('active');
+});
+
+//! Quantity items in cart
+const valueCart = JSON.parse(localStorage.getItem('cart'));
+if (valueCart) {
+   let quantity = 0;
+   valueCart.forEach((e) => {
+      quantity += Number(e.quantity);
+      $('.quantity-item').innerHTML = quantity;
+   });
+   if (quantity > 0) {
+      $('.quantity-item').classList.add('active');
+   }
+}
