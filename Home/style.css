@@ -310,6 +310,7 @@ img {
 }
 #header .header-container .cart a:nth-child(1):hover .quantity-item {
    background-color: white;
+   color: #dc8068;
 }
 #header .header-container .cart a .quantity .quantity-item.active {
    display: block;
@@ -1285,13 +1286,14 @@ img {
    color: #372726;
    text-transform: uppercase;
    position: relative;
+   text-shadow: 2px 2px 8px #fff;
 }
 
-/* #main .contact-us .contact-wrapper .address h2 img {
+#main .contact-us .contact-wrapper .address h2 img {
    position: absolute;
-   top: 30px;
+   top: -25px;
    left: -90px;
-} */
+}
 
 #main .contact-us .contact-wrapper .address h3 {
    font-size: 3rem;
@@ -1299,12 +1301,16 @@ img {
    font-weight: 500;
    text-transform: uppercase;
    margin-bottom: 20px;
+   text-align: center;
+   text-shadow: 2px 2px 8px #fff;
 }
 
 #main .contact-us .contact-wrapper .address p {
    font-size: 1.6rem;
    color: #75423e;
    font-weight: 500;
+   text-align: center;
+   text-shadow: 2px 2px 8px #fff;
 }
 
 #main .contact-us .contact-wrapper .map iframe {
@@ -1418,9 +1424,7 @@ img {
       width: 60%;
       object-fit: cover;
    }
-   /* .image-width {
-      width: 100px !important;
-   } */
+
    .swiper-button-prev,
    .swiper-button-next,
    #header .header-container .cart a:nth-child(4),

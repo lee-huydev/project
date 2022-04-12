@@ -105,6 +105,7 @@ if (itemsLocal && itemsLocal.length !== 0) {
       product.push(e);
    });
 }
+const AllItemsStore = localStorage.setItem('allItems', JSON.stringify(product));
 //! Add product in local then render in admin
 // const productToAdmin = [];
 // product.forEach((e) => {

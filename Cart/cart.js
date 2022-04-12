@@ -63,7 +63,7 @@ checkNumber = () => {
             let attriBute = element.getAttribute('number');
             valueCarts.forEach((e) => {
                if (Number(e.id) === Number(attriBute)) {
-                  e.quantity = element.value;
+                  e.quantity = Number(element.value);
                   let price = e.price * e.quantity;
                   e.totalPrice = price;
                   localStorage.removeItem('cart');

@@ -7,50 +7,88 @@
       <title>Liên hệ</title>
 
       <link rel="stylesheet" href="./contact.css" />
+      <link rel="stylesheet" href="../assets/css/moda-search.css" />
 
       <!-- Font Awesome -->
+      <link rel="stylesheet" href="../assets/font/fontawesome-pro-6.0.0-beta3-web/css/all.css" />
       <link
+         href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
          rel="stylesheet"
-         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      />
+      <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@300;500&display=swap"
+         rel="stylesheet"
       />
    </head>
    <body>
-      <header class="header">
-         <div class="container">
-            <a href="#" class="logo">
-               <img src="../assets/img/logo-main.webp" alt="" />
-            </a>
-            <nav class="navbar">
-               <ul class="navlist">
+      <header id="header">
+         <div class="header-container">
+            <div class="logo">
+               <img class="image image-mobile" src="../assets/img/logo-main.webp" alt="" />
+            </div>
+            <div class="navbar">
+               <ul>
                   <li><a href="../index.html">Trang chủ</a></li>
                   <li><a href="../Intro/intro.html">Giới thiệu</a></li>
                   <li><a href="../News/news.html">Tin tức</a></li>
                   <li>
                      <a href="../Store/store.html"
-                        >Cửa hàng <i class="fa fa-angle-down open-close"></i
+                        >Cửa hàng <i class="fa-regular fa-angle-down"></i
                      ></a>
+                     <ul>
+                        <li><a href="../Menu/menu.html">thực đơn cafe</a></li>
+                     </ul>
                   </li>
                   <li><a href="#">Liên hệ</a></li>
                </ul>
-
-               <div class="user-cart">
-                  <ul class="list-inline">
-                     <li class="mini-cart">
-                        <a href="" class="fa fa-shopping-cart"></a>
-                     </li>
-                     <li class="search-bar">
-                        <a href="" class="fa fa-search"></a>
-                     </li>
-                     <li class="login-desktop"><a href="" class="fa fa-user"></a></li>
-                     <li class="button-order">
-                        <div class="box">
-                           <i class="fa-solid fa-up-long"></i>
-                           <a href="">Đặt <br />bàn</a>
+            </div>
+            <div class="cart">
+               <a href="./Cart/cart.html">
+                  <i class="fa-solid fa-cart-shopping quantity">
+                     <span class="quantity-item">1</span>
+                  </i>
+               </a>
+               <a href="" class="search-js">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+               </a>
+               <a href="#">
+                  <i class="fa-solid fa-user"></i>
+                  <div class="signup-form">
+                     <h3>Đăng nhập</h3>
+                     <form action="" class="form-signup">
+                        <label for="">Tên đăng nhập</label>
+                        <input type="text" class="username" />
+                        <label for="">Mật khẩu</label>
+                        <input type="password" class="pass" />
+                        <div class="sign-row">
+                           <input type="submit" class="sign-up" value="Đăng nhập" />
+                           <input type="submit" class="sign-in" value="Đăng ký" />
                         </div>
-                     </li>
-                  </ul>
-               </div>
-            </nav>
+                     </form>
+                  </div>
+               </a>
+               <a href="">Đặt bàn</a>
+               <span class="menu-mobile"><i class="fa-solid fa-bars"></i></span>
+            </div>
+         </div>
+         <div class="menu-drop">
+            <div class="menu-drop__container">
+               <ul class="list-parent">
+                  <li><a href="../index.html">Trang chủ</a></li>
+                  <li><a href="../Intro/intro.html">Giới thiệu</a></li>
+                  <li><a href="../News/news.html">Tin tức</a></li>
+                  <li>
+                     <a href="../Store/store.html"
+                        >Cửa hàng <span><i class="fa-solid fa-caret-down"></i></span
+                     ></a>
+                     <ul class="list-child">
+                        <li><a href="../Menu/menu.html">Thực đơn cafe</a></li>
+                     </ul>
+                  </li>
+                  <li><a href="../Contact/contact.html">Liên hệ</a></li>
+               </ul>
+            </div>
          </div>
       </header>
 
@@ -184,5 +222,26 @@
             <p>&copy; <span>2020</span> Bản quyền thuộc về Kiến Vàng. Cung cấp bởi Sapo</p>
          </div>
       </footer>
+      <div id="modal-search">
+         <div class="modal-container">
+            <div class="search">
+               <i class="fa-light fa-magnifying-glass"></i>
+               <input
+                  type="text"
+                  placeholder="Tìm kiếm sản phẩm"
+                  class="input-search"
+                  oninput="checkValue()"
+               />
+               <i class="fa-light fa-xmark input-close"></i>
+            </div>
+            <div class="product-search">
+               <h3>Sản phẩm hiện có</h3>
+               <ul class="list"></ul>
+            </div>
+         </div>
+      </div>
+      <script src="../Contact/contact.js"></script>
+      <script src="../assets/js/modal-search.js"></script>
+      <script src="../assets/js/login.js"></script>
    </body>
 </html>

@@ -6,6 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Giới thiệu</title>
       <link rel="stylesheet" href="./intro.css" />
+      <link rel="stylesheet" href="../assets/css/moda-search.css" />
       <link rel="stylesheet" href="../assets/font/fontawesome-pro-6.0.0-beta3-web/css/all.css" />
       <link
          href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
@@ -49,7 +50,9 @@
             </div>
             <div class="cart">
                <a href="../Cart/cart.html">
-                  <i class="fa-solid fa-cart-shopping"></i>
+                  <i class="fa-solid fa-cart-shopping quantity">
+                     <span class="quantity-item">1</span>
+                  </i>
                </a>
                <a href="" class="search-js">
                   <i class="fa-solid fa-magnifying-glass"></i>
@@ -71,6 +74,25 @@
                   </div>
                </a>
                <a href="">Đặt bàn</a>
+               <span class="menu-mobile"><i class="fa-solid fa-bars"></i></span>
+            </div>
+         </div>
+         <div class="menu-drop">
+            <div class="menu-drop__container">
+               <ul class="list-parent">
+                  <li><a href="../index.html">Trang chủ</a></li>
+                  <li><a href="../Intro/intro.html">Giới thiệu</a></li>
+                  <li><a href="../News/news.html">Tin tức</a></li>
+                  <li>
+                     <a href="../Store/store.html"
+                        >Cửa hàng <span><i class="fa-solid fa-caret-down"></i></span
+                     ></a>
+                     <ul class="list-child">
+                        <li><a href="../Menu/menu.html">Thực đơn cafe</a></li>
+                     </ul>
+                  </li>
+                  <li><a href="../Contact/contact.html">Liên hệ</a></li>
+               </ul>
             </div>
          </div>
       </header>
@@ -139,16 +161,17 @@
                   type="text"
                   placeholder="Tìm kiếm sản phẩm"
                   class="input-search"
-                  onchange="checkValue()"
+                  oninput="checkValue()"
                />
                <i class="fa-light fa-xmark input-close"></i>
             </div>
-            <div class="history">
-               <h3>Lịch sử tìm kiếm</h3>
+            <div class="product-search">
+               <h3>Sản phẩm hiện có</h3>
                <ul class="list"></ul>
             </div>
          </div>
       </div>
       <script src="./intro.js"></script>
+      <script src="../assets/js/modal-search.js"></script>
    </body>
 </html>

@@ -6,6 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Thực đơn</title>
       <link rel="stylesheet" href="./menu.css" />
+      <link rel="stylesheet" href="../assets/css/moda-search.css" />
       <link rel="stylesheet" href="../assets/font/fontawesome-pro-6.0.0-beta3-web/css/all.css" />
       <link
          href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
@@ -40,14 +41,14 @@
                         <li><a href="../Menu/menu.html">thực đơn cafe</a></li>
                      </ul>
                   </li>
-                  <li><a href="">Liên hệ</a></li>
+                  <li><a href="../Contact/contact.html">Liên hệ</a></li>
                </ul>
             </div>
             <div class="cart">
                <a href="../Cart/cart.html">
                   <i class="fa-solid fa-cart-shopping"></i>
                </a>
-               <a href="">
+               <a href="" class="search-js">
                   <i class="fa-solid fa-magnifying-glass"></i>
                </a>
                <a href="">
@@ -749,8 +750,27 @@
             </div>
          </div>
       </footer>
+      <div id="modal-search">
+         <div class="modal-container">
+            <div class="search">
+               <i class="fa-light fa-magnifying-glass"></i>
+               <input
+                  type="text"
+                  placeholder="Tìm kiếm sản phẩm"
+                  class="input-search"
+                  oninput="checkValue()"
+               />
+               <i class="fa-light fa-xmark input-close"></i>
+            </div>
+            <div class="product-search">
+               <h3>Sản phẩm hiện có</h3>
+               <ul class="list"></ul>
+            </div>
+         </div>
+      </div>
       <div id="toastId"></div>
       <script src="./menu.js"></script>
       <script src="../assets/js/login.js"></script>
+      <script src="../assets/js/modal-search.js"></script>
    </body>
 </html>

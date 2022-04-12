@@ -122,6 +122,8 @@ const note = document.querySelector('.note');
 const customer = localStorage.getItem('customer')
    ? JSON.parse(localStorage.getItem('customer'))
    : [];
+const modal = document.querySelector('#modal-order');
+const ok = document.querySelector('.ok');
 sendOrder.onclick = (e) => {
    let items = JSON.parse(localStorage.getItem('cart'));
    const date = new Date();
@@ -153,7 +155,11 @@ sendOrder.onclick = (e) => {
       customer.push(obj);
       localStorage.setItem('customer', JSON.stringify(customer));
       localStorage.removeItem('cart');
-      location.replace('../Store/store.html');
       items = [];
+      modal.classList.add('active');
+      ok.onclick = () => {
+         modal.classList.remove('active');
+         location.replace('../Store/store.html');
+      };
    }
 };

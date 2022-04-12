@@ -1,0 +1,117 @@
+img {
+   max-width: 100%;
+   object-fit: cover;
+   display: inline-block;
+}
+#modal-search {
+   width: 100%;
+   background-color: rgba(0, 0, 0, 0.5);
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 999;
+   display: none;
+}
+#modal-search.active {
+   display: block;
+}
+#modal-search .modal-container {
+   max-width: 1200px;
+   margin: 0 auto;
+   height: 100vh;
+}
+#modal-search .modal-container .search {
+   background-color: #333;
+   height: 80px;
+   margin: 0 auto;
+   text-align: center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   animation: openModal 0.8s ease-out;
+}
+@keyframes openModal {
+   0% {
+      transform: translateX(100%);
+      opacity: 0;
+   }
+   100% {
+      transform: translateX(0);
+      opacity: 1;
+   }
+}
+#modal-search .modal-container .search input {
+   width: 400px;
+   padding: 5px 10px;
+   font-size: 1.6rem;
+   font-family: 'Montserrat', sans-serif;
+   outline: none;
+   background-color: transparent;
+   border: none;
+   color: white;
+}
+#modal-search .modal-container .search i {
+   color: #ccc;
+   font-size: 1.4rem;
+}
+#modal-search .modal-container .search i:last-child {
+   font-size: 1.8rem;
+}
+#modal-search .modal-container .search i:last-child:hover {
+   color: white;
+   cursor: pointer;
+}
+#modal-search .modal-container .product-search {
+   width: 500px;
+   max-height: 500px;
+   overflow-y: scroll;
+   background-color: #f5f5f5;
+   margin: 0 auto;
+   padding: 20px 0;
+   border-bottom-right-radius: 20px;
+   border-bottom-left-radius: 20px;
+   font-family: 'Montserrat', sans-serif;
+   display: none;
+}
+#modal-search .modal-container .product-search.active {
+   display: block;
+}
+#modal-search .modal-container .product-search h3 {
+   color: #877267;
+   font-size: 1.6rem;
+   padding-left: 20px;
+}
+#modal-search .modal-container .product-search .list {
+   margin-top: 20px;
+   font-size: 1.4rem;
+   color: #333;
+}
+#modal-search .modal-container .product-search .list li {
+   padding: 20px 25px;
+   list-style: none;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   display: flex;
+}
+#modal-search .modal-container .product-search .list li span {
+   width: 50px;
+}
+#modal-search .modal-container .product-search .list li .infor {
+   flex-grow: 1;
+}
+#modal-search .modal-container .product-search .list li:hover {
+   background-color: #dc8068;
+   cursor: pointer;
+}
+
+#modal-search .modal-container .product-search .list li .infor {
+   margin-left: 40px;
+}
+#modal-search .modal-container .product-search .list li .infor h4 {
+   font-size: 1.6rem;
+   margin-bottom: 10px;
+}
+#modal-search .modal-container .product-search .list li .infor span {
+   font-size: 1.6rem;
+}

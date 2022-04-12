@@ -4,22 +4,12 @@
       <meta charset="UTF-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Tất cả sản phẩm</title>
-      <link rel="stylesheet" href="./store.css" />
+      <title>Tìm kiếm sản phẩm</title>
+      <link rel="stylesheet" href="./search.css" />
       <link rel="stylesheet" href="../assets/css/moda-search.css" />
       <link
-         href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
          rel="stylesheet"
-      />
-      <link rel="stylesheet" href="../assets/font/fontawesome-pro-6.0.0-beta3-web/css/all.css" />
-      <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" />
-      <link
-         href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@300;500&display=swap"
-         rel="stylesheet"
-      />
-      <link
-         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap"
-         rel="stylesheet"
+         href="../assets/font/fontawesome-pro-6.0.0-beta3-web/css/all.min.css"
       />
    </head>
    <body>
@@ -46,9 +36,9 @@
             </div>
             <div class="cart">
                <a href="../Cart/cart.html">
-                  <i class="fa-solid fa-cart-shopping quantity"
-                     ><span class="quantity-item">1</span></i
-                  >
+                  <i class="fa-solid fa-cart-shopping quantity">
+                     <span class="quantity-item">1</span>
+                  </i>
                </a>
                <a href="" class="search-js">
                   <i class="fa-solid fa-magnifying-glass"></i>
@@ -76,7 +66,7 @@
          <div class="menu-drop">
             <div class="menu-drop__container">
                <ul class="list-parent">
-                  <li><a href="../index.html">Trang chủ</a></li>
+                  <li><a href="#">Trang chủ</a></li>
                   <li><a href="./Intro/intro.html">Giới thiệu</a></li>
                   <li><a href="./News/news.html">Tin tức</a></li>
                   <li>
@@ -96,52 +86,42 @@
          <div class="addbar-container">
             <div class="row">
                <a href="">Trang chủ</a>
-               <span>Tất cả sản phẩm</span>
+               <span>Tìm kiếm sản phẩm</span>
             </div>
          </div>
       </div>
       <main id="content">
-         <div class="content-container">
-            <div class="sort">
-               <div class="sort-container">
-                  <label for="btn-sort">Săp xếp</label>
-                  <button id="btn-sort">Mặc định <i class="fa-solid fa-sort-down"></i></button>
-               </div>
-            </div>
-            <div class="product">
-               <div class="product-container"></div>
-            </div>
-            <div class="banner">
-               <div class="banner-container">
-                  <img src="../assets/img/collection_banner_image.webp" alt="" class="image" />
-               </div>
-            </div>
-         </div>
+         <div class="content-container"></div>
       </main>
-      <footer id="footer">
-         <div class="visit">
-            <div class="visit-container">
+      <footer class="footer">
+         <div class="footer__upper">
+            <div class="container">
                <h2>GHÉ THĂM CỬA HÀNG</h2>
                <h3>ngày hôm nay</h3>
-               <div class="logo">
-                  <img class="image" src="../assets/img/logo-cup.png" alt="" />
+               <div>
+                  <img src="../assets/img/logo-cup.png" alt="" />
                </div>
-               <a href="" class="btn">vào shop cafe !</a>
-               <div class="footer-nav">
-                  <ul>
-                     <li><a href="">trang chủ</a></li>
-                     <li><a href="">thực đơn</a></li>
-                     <li><a href="">thư viện</a></li>
-                     <li><a href="">liên hệ</a></li>
-                  </ul>
-               </div>
+               <a
+                  href="
+         "
+                  class="order-btn"
+                  >Vào shop cafe!</a
+               >
             </div>
+            <nav class="footer-nav">
+               <ul class="footer-nav-list">
+                  <li><a href="#">Trang chủ</a></li>
+                  <li><a href="#">Thực đơn</a></li>
+                  <li><a href="#">Thư viện</a></li>
+                  <li><a href="#">Liên hệ</a></li>
+               </ul>
+            </nav>
          </div>
-         <div class="copyright">
-            <div class="copyright-container">
-               <a href="#"><i class="fa-light fa-angle-up"></i></a>
-               <small>© 2021 Bản quyền thuộc về Kiến Vàng. Cung cấp bởi Sapo</small>
-            </div>
+         <div class="footer__lower">
+            <a href="#" class="back-to-top">
+               <i class="fa fa-angle-up"></i>
+            </a>
+            <p>&copy; <span>2020</span> Bản quyền thuộc về Kiến Vàng. Cung cấp bởi Sapo</p>
          </div>
       </footer>
       <div id="toast">
@@ -165,9 +145,8 @@
             </div>
          </div>
       </div>
-      <script src="./store.js"></script>
-      <script src="../assets/js/login.js"></script>
-      <script src="../assets/js/menu-mobile.js"></script>
+      <script src="./search.js"></script>
       <script src="../assets/js/modal-search.js"></script>
+      <script src="../assets/js/login.js"></script>
    </body>
 </html>

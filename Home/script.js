@@ -69,7 +69,6 @@ $('.menu-mobile').addEventListener('click', () => {
 });
 
 //! Quantity items in cart
-
 const valueCart = JSON.parse(localStorage.getItem('cart'));
 if (valueCart) {
    let quantity = 0;
