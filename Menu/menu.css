@@ -77,6 +77,9 @@ body::-webkit-scrollbar-track {
    top: 0;
    left: 0;
 }
+#header .menu-drop {
+   display: none;
+}
 #header .header-container {
    max-width: 1200px;
    height: 80px;
@@ -236,9 +239,9 @@ body::-webkit-scrollbar-track {
    position: absolute;
    font-family: 'Montserrat', sans-serif;
    font-weight: 500;
-   top: -15px;
+   top: -12px;
    right: -8px;
-   padding: 2px 4px;
+   padding: 1px 4px;
    background-color: #dc8068;
    border-radius: 50%;
    font-size: 1.4rem;
