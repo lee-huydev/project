@@ -656,10 +656,10 @@ body::-webkit-scrollbar-track {
 
 /* !Tablet */
 @media screen and (max-width: 1023px) and (min-width: 740px) {
-   .image-mobile {
+   /* .image-mobile {
       width: 60%;
       object-fit: cover;
-   }
+   } */
    #header .header-container .cart a:nth-child(4),
    #header .header-container .navbar {
       display: none !important;

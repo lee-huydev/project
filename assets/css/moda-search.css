@@ -16,8 +16,6 @@ img {
    display: block;
 }
 #modal-search .modal-container {
-   max-width: 1200px;
-   margin: 0 auto;
    height: 100vh;
 }
 #modal-search .modal-container .search {
@@ -114,4 +112,21 @@ img {
 }
 #modal-search .modal-container .product-search .list li .infor span {
    font-size: 1.6rem;
+}
+
+@media screen and (max-width: 739px) {
+   #modal-search .modal-container {
+      max-width: 739px;
+      width: 100%;
+      margin: 0 auto;
+      /* padding: 0 10px; */
+   }
+   #modal-search .modal-container .search {
+      padding: 0 15px;
+   }
+   #modal-search .modal-container .product-search {
+      max-width: 739px;
+      width: 100%;
+      margin: 0 auto;
+   }
 }

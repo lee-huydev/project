@@ -530,10 +530,10 @@ body::-webkit-scrollbar-track {
    section {
       padding: 20px 0;
    }
-   .image-mobile {
+   /* .image-mobile {
       width: 60%;
       object-fit: cover;
-   }
+   } */
    #header .header-container .cart a:nth-child(4),
    #header .header-container .navbar {
       display: none !important;
@@ -608,6 +608,10 @@ body::-webkit-scrollbar-track {
    html {
       font-size: 50%;
    }
+   .image-mobile {
+      width: 60%;
+      object-fit: cover;
+   }
    #content .content-container .author-blog .image {
       height: 350px;
    }
@@ -622,6 +626,10 @@ body::-webkit-scrollbar-track {
 
 /* Mobile (max-width: 450px) */
 @media screen and (max-width: 450px) {
+   .image-mobile {
+      width: 60%;
+      object-fit: cover;
+   }
    #content .content-container .session-art .art-about .author {
       flex-direction: column;
    }

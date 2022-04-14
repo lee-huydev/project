@@ -101,3 +101,23 @@ toast = (img, name, quan) => {
       div.remove();
    }, 2500);
 };
+//! Quantity items in cart
+const valueCarts = JSON.parse(localStorage.getItem('cart'));
+if (valueCarts) {
+   let quantity = 0;
+   valueCarts.forEach((e) => {
+      quantity += Number(e.quantity);
+      $('.quantity-item').innerHTML = quantity;
+   });
+   if (quantity > 0) {
+      $('.quantity-item').classList.add('active');
+   }
+}
+
+// Toggle menu
+const menuMobile = document.querySelector('.menu-mobile');
+const menuDrop = document.querySelector('.menu-drop');
+
+menuMobile.addEventListener('click', function () {
+   menuDrop.classList.toggle('active');
+});

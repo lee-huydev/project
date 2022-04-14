@@ -545,10 +545,10 @@ img {
    section {
       padding: 20px 0;
    }
-   .image-mobile {
+   /* .image-mobile {
       width: 60%;
       object-fit: cover;
-   }
+   } */
    #header .header-container .cart a:nth-child(4),
    #header .header-container .navbar {
       display: none !important;
@@ -624,12 +624,20 @@ img {
    html {
       font-size: 50%;
    }
+   .image-mobile {
+      width: 60%;
+      object-fit: cover;
+   }
 }
 
 /* Mobile (max-width: 450px) */
 @media screen and (max-width: 450px) {
    section {
       padding: 5px 0;
+   }
+   .image-mobile {
+      width: 60%;
+      object-fit: cover;
    }
    #main .contact__position {
       flex-direction: column;
