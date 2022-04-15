@@ -173,7 +173,7 @@ for (let addCart of addCarts) {
       numberCart();
       const attriBute = addCart.getAttribute('number');
       product.forEach((e) => {
-         if (e.id == Number(attriBute)) {
+         if (e.id === Number(attriBute)) {
             let obj = {};
             obj = {
                id: e.id,

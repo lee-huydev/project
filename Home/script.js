@@ -42,7 +42,6 @@ const observer = new IntersectionObserver(
       rootMargin: '0px 0px -20% 0px',
    }
 );
-const banner = $('.in__view-cupMilk');
 inView.forEach(function (element) {
    observer.observe(element);
 });
@@ -116,7 +115,7 @@ btnBuy.forEach((e) => {
    });
 });
 
-//! Modal
+//! Modal Order
 const people = $('#people');
 const names = $('#name');
 const phone = $('#phone');

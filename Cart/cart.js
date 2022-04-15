@@ -14,22 +14,27 @@ renderCart = (id, name, price, src, quantity, totalPrice) => {
    <td>${name}</td>
    <td>${price}.000₫</td>
    <td class='quan'>
-   <input type='number' min='1' class='quantity' oninput='checkNumber()' value="${quantity}" number="${id}"/>
+   <input type='number' min='1' class='quantity' value="${quantity}" number="${id}"/>
    </td>
    <td>${totalPrice}.000₫</td>
-   <td><button class="delete" number="${id}">Xóa</button></td>
+   <td><button class="delete">Xóa</button></td>
    `;
 };
+
+//! Render
 valueCartInLocal = () => {
    for (let valueCart of valueCarts) {
+      function formatNumber(num) {
+         var n = Number(num);
+         return n.toLocaleString('vi');
+      }
       renderCart(
          valueCart.id,
-         // valueCart.number,
          valueCart.name,
          valueCart.price,
          valueCart.img,
          valueCart.quantity,
-         valueCart.totalPrice
+         formatNumber(valueCart.totalPrice)
       );
    }
 };
@@ -41,14 +46,29 @@ if (!valueCarts || valueCarts.length == 0) {
    $('.total').classList.add('active-total');
    valueCartInLocal();
 }
+//! Change quantity
 const quantitys = $$('.quantity');
-checkNumber = () => {
-   quantitys.forEach((element) => {
-      element.onclick = () => {
+quantitys.forEach((element) => {
+   element.onclick = () => {
+      let attriBute = element.getAttribute('number');
+      valueCarts.forEach((e) => {
+         if (Number(e.id) === Number(attriBute)) {
+            e.quantity = element.value;
+            let price = e.price * e.quantity;
+            e.totalPrice = price;
+            localStorage.removeItem('cart');
+            localStorage.setItem('cart', JSON.stringify(valueCarts));
+            location.reload();
+         }
+      });
+   };
+   element.addEventListener('keyup', (event) => {
+      event.preventDefault();
+      if (event.keyCode === 13) {
          let attriBute = element.getAttribute('number');
          valueCarts.forEach((e) => {
             if (Number(e.id) === Number(attriBute)) {
-               e.quantity = element.value;
+               e.quantity = Number(element.value);
                let price = e.price * e.quantity;
                e.totalPrice = price;
                localStorage.removeItem('cart');
@@ -56,26 +76,10 @@ checkNumber = () => {
                location.reload();
             }
          });
-      };
-      element.addEventListener('keyup', (event) => {
-         event.preventDefault();
-         if (event.keyCode === 13) {
-            let attriBute = element.getAttribute('number');
-            valueCarts.forEach((e) => {
-               if (Number(e.id) === Number(attriBute)) {
-                  e.quantity = Number(element.value);
-                  let price = e.price * e.quantity;
-                  e.totalPrice = price;
-                  localStorage.removeItem('cart');
-                  localStorage.setItem('cart', JSON.stringify(valueCarts));
-                  location.reload();
-               }
-            });
-         }
-      });
+      }
    });
-};
-// Delete cart
+});
+//! Delete cart
 const dels = $$('.delete');
 for (let index in dels) {
    dels[index].onclick = () => {
